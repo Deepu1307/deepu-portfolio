@@ -1,0 +1,89 @@
+header {
+  height: 100vh;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.header_container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+/* ++++++++++ CTA +++++++++++ */
+
+.cta {
+  margin-top: 2.3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+/* ++++++++++ HEADER SOCIALS +++++++++++ */
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 3rem;
+  background: var(--color-primary);
+}
+
+/* ++++++++++ MY IMAGES +++++++++++ */
+
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 20rem;
+  height: 70rem;
+  position: absolute;
+  /* left: calc(50% - 11rem); */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3rem;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 12rem 12rem 0 0;
+}
+
+/* ++++++++++ SCROLL DOWN +++++++++++ */
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 100vh;
+  }
+
+  /* .me {
+    width: 20rem;
+    height: 50rem;
+  } */
+}
+
+/* ++++++++++++ MEADIA QUERIES (SMALL DEVICE) +++++++++++ */
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+}
