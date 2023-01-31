@@ -5,13 +5,13 @@ const HeaderSocials = () => {
   return (
     <div className="header__socials">
       <a href="https://linkedin.com" target="_blank">
-        <BsLinkedin />
+        <BsLinkedin className="header__socials-icon" />
       </a>
       <a href="https://github.com" target="_blank">
-        <BsGithub />
+        <BsGithub className="header__socials-icon" />
       </a>
       <a href="https://facebook.com" target="_blank">
-        <BsFacebook />
+        <BsFacebook className="header__socials-icon" />
       </a>
       {/* <a href="https://instagram.com" target="_blank">
         <BsInstagram />

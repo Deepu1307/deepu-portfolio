@@ -41,7 +41,7 @@ body {
   /* color: var(--color-white); */
   line-height: 1.7;
   background: #fff;
-  color: #000;
+  color: #000; 
   /* background-image: url(../src/assets/bg-texture.png); */
 }
 
@@ -68,13 +68,13 @@ section {
   margin-top: 8rem;
 }
 
-section > h2,
-section > h5 {
+section>h2,
+section>h5 {
   text-align: center;
   color: var(--color-light);
 }
 
-section > h2 {
+section>h2 {
   color: var(--color-primary);
   margin-bottom: 3rem;
 }
@@ -138,7 +138,7 @@ img {
     width: var(--container-width-sm);
   }
 
-  section > h2 {
+  section>h2 {
     margin-bottom: 2rem;
   }
 }

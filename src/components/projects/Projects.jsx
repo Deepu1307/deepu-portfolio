@@ -59,9 +59,9 @@ const Projects = () => {
     <h2>Projects</h2>
     <div className="container project__container">
       {
-        data.map((proj) => {
+        data.map((proj, index) => {
           return (
-            <article className="project__items">
+            <article className="project__items" key={index}>
               <div className="project__item-image">
                 <img src={proj.image} alt="" />
               </div>

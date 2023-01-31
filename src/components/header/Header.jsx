@@ -4,31 +4,33 @@ import HeaderSocials from "./HeaderSocial.jsx";
 import ME from "../../assets/me.png";
 import "./header.css";
 import DOTS from 'vanta/dist/vanta.dots.min';
+import Typewriter from 'typewriter-effect';
+
 
 
 const Header = () => {
 
-  const [vantaEffect, setVantaEffect] = useState(null)
+  // const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(DOTS({
-        el: myRef.current,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,       
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0xff2095,
-        backgroundColor: 0xffffff,
-        size: 4.40,
-        showLines: false
-      }))
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect]);
+  // useEffect(() => {
+  //   if (!vantaEffect) {
+  //     setVantaEffect(DOTS({
+  //       el: myRef.current,
+  //       mouseControls: true,
+  //       touchControls: true,
+  //       gyroControls: false,
+  //       scale: 1.00,
+  //       scaleMobile: 1.00,
+  //       color: 0xff2095,
+  //       backgroundColor: "#fff",
+  //       size: 10,
+  //       showLines: false
+  //     }))
+  //   }
+  //   return () => {
+  //     if (vantaEffect) vantaEffect.destroy()
+  //   }
+  // }, [vantaEffect]);
 
 
   return (
@@ -36,7 +38,16 @@ const Header = () => {
       <div className="container header_container">
         <h5>Hello I'm</h5>
         <h1>Deepu Kumar</h1>
-        <h5 className="text-light">Fullstack Developer</h5>
+        {/* Here I will use typewriter effect */}
+        {/* <h5 className="text-light">Fullstack Developer</h5> */}
+        <Typewriter
+          options={{
+            strings: ['Fullstack Web Developer', 'MERN Stack Developer', "React Native Developer"],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+
         <CTA />
         <HeaderSocials />
 
