@@ -19,18 +19,19 @@ nav a {
   padding: 0.5rem;
   border-radius: 50%;
   display: flex;
-  color: var(--color-light);
+  color: var(--color-bg);
   font-size: 1.1rem;
+  /* border: 1px solid var(--color-bg); */
 }
 
 nav a:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--color-primary);
+  color: var(--color-bg);
 }
 
 nav a.active {
-  /* background: var(--color-bg); */
-  background: rgba(0, 0, 0, 0.8);
-  color: var(--color-white);
+  background: var(--color-primary);
+  color: var(--color-bg);
 }
 
 #tooltip {
@@ -42,7 +43,7 @@ nav a.active {
 #tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
+  background: var(--color-bg);
   color: #fff;
   text-align: center;
   border-radius: 6px;

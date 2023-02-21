@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import CTA from "./CTA.jsx";
 import HeaderSocials from "./HeaderSocial.jsx";
-import ME from "../../assets/me.png";
+// import ME from "../../assets/me.png";
+import ME from "../../assets/pic3.png";
 import "./header.css";
 import DOTS from 'vanta/dist/vanta.dots.min';
 import Typewriter from 'typewriter-effect';
@@ -30,11 +31,11 @@ const Header = () => {
   //   return () => {
   //     if (vantaEffect) vantaEffect.destroy()
   //   }
-  // }, [vantaEffect]);
+  // }, [vantaEffect]);me_img
 
 
   return (
-    <header ref={myRef}>
+    <header ref={myRef} id="header">
       <div className="container header_container">
         <h5>Hello I'm</h5>
         <h1>Deepu Kumar</h1>
@@ -47,17 +48,16 @@ const Header = () => {
             loop: true,
           }}
         />
-
         <CTA />
         <HeaderSocials />
 
         <div className="me">
-          <img src={ME} alt="" />
+          <img className='me_img' src={ME} alt="" />
         </div>
 
-        <a href="#contact" className="scroll__down">
+        {/* <a href="#contact" className="scroll__down">
           Scroll Down
-        </a>
+        </a> */}
       </div>
     </header>
   );
