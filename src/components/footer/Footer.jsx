@@ -16,15 +16,15 @@ const Footer = () => {
     </ul>
 
     <div className="footer__socials">
-      <a href=""><BsLinkedin className="footer__social__icon" /></a>
-      <a href=""><BsGithub /></a>
-      <a href=""><BsStackOverflow /></a>
-      <a href=""><BsTwitter /></a>
-      <a href=""><BsInstagram /></a>
-      <a href=""><BsFacebook /></a>
+      <a href="https://www.linkedin.com/in/deepu1307/" target="_blank"><BsLinkedin className="footer__social__icon" /></a>
+      <a href="https://github.com/Deepu1307" target="_blank"><BsGithub /></a>
+      <a href="https://stackoverflow.com/users/14964835/deepu-kumar" target="_blank"><BsStackOverflow /></a>
+      <a href="https://twitter.com/DeepuDeveloper" target="_blank"><BsTwitter /></a>
+      <a href="https://www.instagram.com/deepuk_1307/" target="_blank"><BsInstagram /></a>
+      <a href="https://www.facebook.com/deepu13/" target="_blank"><BsFacebook /></a>
     </div>
 
-    ----------    <div className="footer__copyright">
+  <div className="footer__copyright">
       <small>&copy; Deepu Kumar. All rights reserved. </small>
     </div>
   </footer>;
