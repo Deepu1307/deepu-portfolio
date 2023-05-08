@@ -21,24 +21,21 @@ const About = () => {
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>3+ Months Working </small>
+              <small className="text-light-small">3+ Months Working </small>
             </article>
             <article className="about__card">
               <FiUsers className="about__icon" />
               <h5>Clients</h5>
-              <small>3+ Woldwide</small>
+              <small className="text-light-small">3+ Woldwide</small>
             </article>
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>15+ Completed </small>
+              <small className="text-light-small">15+ Completed </small>
             </article>
           </div>
           <p className="about__content__para">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-            laboriosam voluptatibus dolorem doloribus nulla vero, ab, cumque aut
-            temporibus consequatur facere, quisquam similique. Sequi minima
-            placeat cumque consectetur dolorum iusto.
+            Hi 👋, Thank you for showing interest in me.
           </p>
           <a className="btn btn-primary" href="#contact">
             Let's Talk

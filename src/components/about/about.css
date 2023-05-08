@@ -58,7 +58,7 @@ padding: 50px 0px;
 .about__card:hover {
   background-color: transparent;
   border-color: var(--color-primary-variant);
-  cursor: default;
+  cursor: default;  
 }
 
 .about__icon {
@@ -78,6 +78,10 @@ padding: 50px 0px;
 .about__content p {
   margin: 2rem 0 2.6rem;
   color: var(--color-black);
+}
+
+.text-light-small {
+  color: var(--color-light) !important; 
 }
 
 

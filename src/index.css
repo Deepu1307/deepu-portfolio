@@ -18,8 +18,10 @@
   --color-primary: #4db5ff;
   --color-primary-variant: rgba(77, 181, 255, 0.4);
   --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
+  --color-light: rgb(239, 231, 231);
   --color-black: #000;
+  --color-white-span-details: #fff;
+  --color-black-span-details: #fff;
 
   --transition: all 400ms ease;
 
@@ -87,7 +89,7 @@ section>h2 {
 }
 
 .text-light {
-  color: var(--color-light);
+  color: var(--color-light) !important;
 }
 
 a {
