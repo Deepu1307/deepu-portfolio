@@ -38,7 +38,7 @@ const sendEmail = (e) => {
           <RiMessengerLine className="contact__option-icon" />
           <h4>Messenger</h4>
           <h5>Deepu Singh</h5>
-          <a href="https://m.me/deepu1307" target="_blank">Send a message</a>
+          <a href="https://m.me/deepu13" target="_blank">Send a message</a>
         </article>
         <article className="contact__option">
           <BsWhatsapp className="contact__option-icon" />
