@@ -1,3 +1,8 @@
+#about {
+background: #e1eff2;
+padding: 50px 0px;
+}
+
 .about__container {
   display: grid;
   grid-template-columns: 35% 50%;
@@ -24,6 +29,12 @@
   transform: rotate(10deg);
   transition: var(--transition);
 }
+
+.about__me--style {
+  scale: 1.27;
+  height: 345px;
+  width: 345px
+} 
 
 .about__me--img:hover {
   transform: rotate(0);
@@ -66,32 +77,71 @@
 
 .about__content p {
   margin: 2rem 0 2.6rem;
-  color: var(--color-light);
+  color: var(--color-black);
 }
+
 
 /* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
 
 @media screen and (max-width: 1024px) {
+  #about h2 {
+    margin-bottom: 0px;
+  }
+
   .about__container {
+    padding: 0;
     grid-template-columns: 1fr;
     gap: 0;
   }
 
   .about__me {
     width: 50%;
+    background: none;
     margin: 2rem auto 4rem;
   }
+
+
+  .about__me--style {
+    scale: 1;
+    height: 300px;
+    width: 380px
+  } 
+
+  .about__me--img {   
+    transform: rotate(0deg);
+  }
+
+
+
 
   .about__content p {
     margin: 1rem 0 1.5rem;
   }
 }
 
-/* ++++++++++++ MEADIA QUERIES (SMALL DEVICE) +++++++++++ */
+
+
+/* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
 @media screen and (max-width: 600px) {
   .about__me {
-    width: 65%;
+    /* width: 65%; */
     margin: 0 auto 3rem;
+    width: 100%;
+    background: none;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;  
+    display: grid;
+    place-items: center;
+  }
+
+  .about__me--style {
+    scale: 1;
+     height: 300px;
+    width: 380px
+  } 
+
+  .about__me--img {   
+    transform: rotate(0deg);
   }
 
   .about__cards {
@@ -107,3 +157,26 @@
     margin: 1.5rem 0;
   }
 }
+
+
+
+/* ++++++++++++ MEADIA QUERIES (SMALL DEVICE) +++++++++++ */
+@media screen and (max-width: 480px) {
+  .about__me--img {   
+    transform: rotate(0deg);
+  }
+
+  .about__me--style {
+    scale: 1;
+    height: 230px;
+    width: 280px
+  } 
+}
+
+
+
+
+
+
+
+

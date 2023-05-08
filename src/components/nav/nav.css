@@ -19,16 +19,54 @@ nav a {
   padding: 0.5rem;
   border-radius: 50%;
   display: flex;
-  color: var(--color-light);
+  color: var(--color-bg);
   font-size: 1.1rem;
+  /* border: 1px solid var(--color-bg); */
 }
 
 nav a:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--color-primary);
+  color: var(--color-bg);
 }
 
 nav a.active {
-  /* background: var(--color-bg); */
-  background: rgba(0, 0, 0, 0.8);
-  color: var(--color-white);
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+#tooltip {
+  position: relative;
+  /* display: inline-block; */
+  border-bottom: 1px dotted black;
+}
+
+#tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background: var(--color-bg);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+
+#tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+#tooltip:hover .tooltiptext {
+  visibility: visible;
 }

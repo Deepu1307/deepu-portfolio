@@ -1,7 +1,13 @@
+#services {
+  background: #e1eff2;
+  padding: 50px 0px;
+  }
+  
 .service__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+  place-items:  center;
 }
 
 .service {
@@ -57,7 +63,7 @@
   .service__container {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding: 0 2rem 0 2rem;
+    /* padding: 0 2rem; */
   }
 }
 

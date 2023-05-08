@@ -56,9 +56,27 @@ const data = [
 const Projects = () => {
   return <section id="projects">
     <h5>My Recent Work</h5>
-    <h2>My Recent Work</h2>
-    <div className="container portfolio__container">
-      <article>Hello Deepu</article>
+    <h2>Projects</h2>
+    <div className="container project__container">
+      {
+        data.map((proj, index) => {
+          return (
+            <article className="project__items" key={index}>
+              <div className="project__item-image">
+                <img src={proj.image} alt="" />
+              </div>
+              <h3>{proj.title}</h3>
+              <div className="project__item-cta">
+                <a href={proj.github} className="btn">Github</a>
+                <a href={proj.demo} 
+                className ="btn btn-primary" target="_blank">Live Demo</a>
+              </div>
+            </article>
+          )
+        })
+      }
+
+
     </div>
   </section>;
 };
