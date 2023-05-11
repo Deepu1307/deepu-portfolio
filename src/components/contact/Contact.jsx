@@ -39,13 +39,7 @@ const sendEmail = (e) => {
           <h4>Messenger</h4>
           <h5>Deepu Singh</h5>
           <a href="https://m.me/deepu13" target="_blank">Send a message</a>
-        </article>
-        <article className="contact__option">
-          <BsWhatsapp className="contact__option-icon" />
-          <h4>Whatsapp</h4>
-          <h5>+91 7322013918</h5>
-          <a href="https://api.whatsapp.com/send?phone=7322013918" target="_blank">Send a message</a>
-        </article>
+        </article>       
       </div>
       {/* FORM */}
       <form ref={formData} onSubmit={sendEmail}>
