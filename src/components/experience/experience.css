@@ -18,6 +18,11 @@
   cursor: default;
 }
 
+.experience__container > div:hover > div > article > div > small {
+  color: var(--color-primary) !important;
+  font-weight: 400;
+}
+
 .experience__container > div h3 {
   text-align: center;
   margin-bottom: 2rem;

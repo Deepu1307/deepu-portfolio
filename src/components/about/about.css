@@ -61,6 +61,11 @@ padding: 50px 0px;
   cursor: default;  
 }
 
+.about__card:hover > small {
+  color: var(--color-primary) !important; 
+  font-weight: 600;
+}
+
 .about__icon {
   color: var(--color-primary);
   font-size: 1.4rem;
@@ -82,6 +87,7 @@ padding: 50px 0px;
 
 .text-light-small {
   color: var(--color-light) !important; 
+  font-weight: 400;
 }
 
 
