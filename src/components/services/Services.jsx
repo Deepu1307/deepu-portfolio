@@ -10,72 +10,76 @@ const Services = () => {
       <div className="container service__container">
         <article className="service">
           <div className="service__head">
-            <h3>UI/UX Design</h3>
+            <h3>Web Development</h3>
           </div>
           <ul className="service__list">
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Front-end development (HTML, CSS, JavaScript & React.js).</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Back-end development (using frameworks like Node.js etc.)</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Web testing and quality assurance & deployment and maintenance.</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Integrations with third-party APIs and services.</p>
             </li>
           </ul>
         </article>
-        {/* End Of UI/UX */}
+        {/* End Of Web Development*/}
         <article className="service">
           <div className="service__head">
-            <h3>UI/UX Design</h3>
+            <h3>App Development</h3>
           </div>
           <ul className="service__list">
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Native app development (iOS and Android).</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Hybrid app development (using React Native).</p>
+            </li>          
+            <li>
+              <BiCheck className="service__list-icon" />
+              <p>Integrations with third-party APIs and services.</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>App testing and quality assurance so that it works.</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>App deployment and maintenance to run smoothly.</p>
             </li>
           </ul>
         </article>
-        {/* End Of FrontEnd Developement*/}
+        {/* End Of App Developement*/}
         <article className="service">
           <div className="service__head">
-            <h3>UI/UX Design</h3>
+            <h3>DevOps</h3>
           </div>
-          <ul className="service__list">
+          <ul className="service__list">          
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Continuous integration and continuous delivery (CI/CD).</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Cloud computing (using services like AWS, Azure, Google Cloud).</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Security and compliance, Automation and orchestration.</p>
             </li>
             <li>
               <BiCheck className="service__list-icon" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Disaster recovery and business continuity planning.</p>
             </li>
           </ul>
         </article>

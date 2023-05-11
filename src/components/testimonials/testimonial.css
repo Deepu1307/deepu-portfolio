@@ -33,6 +33,10 @@
     margin: 0.8rem auto 0;
 }
 
+.client__name {
+    display: block;   
+}
+
 /* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
 @media screen and (max-width: 1024px) {
     .container.testimonials__container {
