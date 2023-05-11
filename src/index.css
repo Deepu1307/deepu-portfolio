@@ -90,6 +90,7 @@ section>h2 {
 
 .text-light {
   color: var(--color-light) !important;
+  font-weight: 400;
 }
 
 a {
