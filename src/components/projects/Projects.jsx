@@ -12,42 +12,42 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Project1",
+    title: "Nexter (Real Estate)",
     github: "",
     demo: ""
   },
   {
     id: 2,
     image: IMG2,
-    title: "Project1",
+    title: "Nexter (Tours & Travels)",
     github: "",
     demo: ""
   },
   {
     id: 3,
     image: IMG3,
-    title: "Project1",
+    title: "Guess Number (Small Game)",
     github: "",
     demo: ""
   },
   {
     id: 4,
     image: IMG4,
-    title: "Project1",
+    title: "Food Delivery Website",
     github: "",
     demo: ""
   },
   {
     id: 5,
     image: IMG5,
-    title: "Project1",
+    title: "Booking.com (Clone)",
     github: "",
     demo: ""
   },
   {
     id: 6,
     image: IMG6,
-    title: "Project1",
+    title: "Tours Booking App",
     github: "",
     demo: ""
   },
