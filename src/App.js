@@ -15,8 +15,7 @@ function App() {
 
   const [arrDirection, setArrDirection] = useState(true);
 
-  const directionHandler = () => {
-    console.log("deepu")
+  const directionHandler = () => {   
     if (arrDirection) {
       setArrDirection(false)
     } else {
@@ -24,16 +23,17 @@ function App() {
     }
     
     if (arrDirection) {
-      window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
-    } 
+      window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    } else {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
   }
-
-  console.log(arrDirection)
+  
 
   return (
     <>
       <div onClick={directionHandler} className="goUp">
-      {arrDirection ? <TbArrowUp className="goUpIcon" /> : <TbArrowDown className="goUpIcon" />}
+      {arrDirection ? < TbArrowUp className="goUpIcon" /> : <TbArrowDown className="goUpIcon" />}
       </div>
 
       <Header />
