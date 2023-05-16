@@ -42,7 +42,7 @@ const Header = () => {
         {/* <h5 className="text-light">Fullstack Developer</h5> */}
         <Typewriter
           options={{
-            strings: ['Fullstack Web Developer', 'MERN Stack Developer', "React Native Developer"],
+            strings: ['React.JS Developer', "React Native Developer", "Node.JS Developer", "Next.JS Developer"],
             autoStart: true,
             loop: true,
           }}
