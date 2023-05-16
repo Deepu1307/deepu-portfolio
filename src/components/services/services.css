@@ -16,6 +16,7 @@
   border: 1px solid var(--color-primary);
   height: fit-content;
   transform: var(--transition);
+  height: 500px;
 }
 
 .service:hover {

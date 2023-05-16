@@ -1,53 +1,53 @@
 import React from "react";
 import "./projects.css";
-import IMG1 from "../../assets/portfolio1.jpg";
-import IMG2 from "../../assets/portfolio2.jpg";
-import IMG3 from "../../assets/portfolio3.jpg";
-import IMG4 from "../../assets/portfolio4.jpg";
+import IMG1 from "../../assets/portfolio1.png";
+import IMG2 from "../../assets/portfolio2.png";
+import IMG3 from "../../assets/portfolio3.png";
+import IMG4 from "../../assets/portfolio4.png";
 import IMG5 from "../../assets/portfolio5.png";
-import IMG6 from "../../assets/portfolio6.jpg";
+import IMG6 from "../../assets/portfolio6.png";
 
 
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Project1",
+    title: "Nexter (Real Estate)",
     github: "",
     demo: ""
   },
   {
     id: 2,
     image: IMG2,
-    title: "Project1",
+    title: "Nexter (Tours & Travels)",
     github: "",
     demo: ""
   },
   {
     id: 3,
     image: IMG3,
-    title: "Project1",
+    title: "Guess Number (Small Game)",
     github: "",
     demo: ""
   },
   {
     id: 4,
     image: IMG4,
-    title: "Project1",
+    title: "Food Delivery Website",
     github: "",
     demo: ""
   },
   {
     id: 5,
     image: IMG5,
-    title: "Project1",
+    title: "Booking.com (Clone)",
     github: "",
     demo: ""
   },
   {
     id: 6,
     image: IMG6,
-    title: "Project1",
+    title: "Tours Booking App",
     github: "",
     demo: ""
   },

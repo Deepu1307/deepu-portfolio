@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import CTA from "./CTA.jsx";
 import HeaderSocials from "./HeaderSocial.jsx";
-// import ME from "../../assets/me.png";
-import ME from "../../assets/pic3.png";
+import ME from "../../assets/me1.png";
 import "./header.css";
 import DOTS from 'vanta/dist/vanta.dots.min';
 import Typewriter from 'typewriter-effect';
@@ -43,7 +42,7 @@ const Header = () => {
         {/* <h5 className="text-light">Fullstack Developer</h5> */}
         <Typewriter
           options={{
-            strings: ['Fullstack Web Developer', 'MERN Stack Developer', "React Native Developer"],
+            strings: ['React.JS Developer', "React Native Developer", "Node.JS Developer", "Next.JS Developer"],
             autoStart: true,
             loop: true,
           }}

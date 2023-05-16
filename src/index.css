@@ -16,6 +16,7 @@
   --color-bg: #1f1f38;  
   --color-bg-variant: #3b3b90;
   --color-primary: #4db5ff;
+  --color-primary-secondary: #007cd5;
   --color-primary-variant: rgba(77, 181, 255, 0.4);
   --color-white: #fff;
   --color-light: rgb(239, 231, 231);
@@ -90,6 +91,7 @@ section>h2 {
 
 .text-light {
   color: var(--color-light) !important;
+  font-weight: 400;
 }
 
 a {
