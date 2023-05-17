@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <header ref={myRef} id="header">
       <div className="container header_container">
-        <h5>Hello I'm</h5>
+        <h5 className='margin_top'>Hello I'm</h5>
         <h1>Deepu Kumar</h1>
         {/* Here I will use typewriter effect */}
         {/* <h5 className="text-light">Fullstack Developer</h5> */}
