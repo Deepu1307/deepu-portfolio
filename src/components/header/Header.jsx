@@ -40,13 +40,16 @@ const Header = () => {
         <h1>Deepu Kumar</h1>
         {/* Here I will use typewriter effect */}
         {/* <h5 className="text-light">Fullstack Developer</h5> */}
-        <Typewriter
-          options={{
-            strings: ['React.JS Developer', "React Native Developer", "Node.JS Developer", "Next.JS Developer"],
-            autoStart: true,
-            loop: true,
-          }}
-        />
+        <div className='margin_top'>
+          <Typewriter
+            options={{
+              strings: ['React.JS Developer', "React Native Developer", "Node.JS Developer", "Next.JS Developer"],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </div>
+      
         <CTA />
         <HeaderSocials />
 
