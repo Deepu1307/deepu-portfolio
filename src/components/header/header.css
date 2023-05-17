@@ -39,6 +39,10 @@ header {
   background: var(--color-primary);
 }
 
+.header__socials-icon {
+  font-size: 1rem;
+}
+
 /* ++++++++++ MY IMAGES +++++++++++ */
 
 .me {
@@ -74,6 +78,23 @@ header {
 
 @media screen and (max-width: 1024px) {
   header {
+    height: 60vh;
+  }
+
+  .margin_top {
+    margin: 10px 0;
+  }
+
+  .header__socials-icon {
+    font-size: 1.5rem;
+  }
+ 
+}
+
+/* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
+
+@media screen and (max-width: 1024px) {
+  header {
     height: 100vh;
   }
 
@@ -87,6 +108,12 @@ header {
 @media screen and (max-width: 600px) {
   header {
     height: 100vh;
+  }
+
+  .me {
+    margin-top: 9rem;
+    width: 25rem;
+    height: 34rem;
   }
 
   .header__socials,

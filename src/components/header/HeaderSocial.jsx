@@ -13,9 +13,9 @@ const HeaderSocials = () => {
       <a href="https://facebook.com" target="_blank">
         <BsFacebook className="header__socials-icon" />
       </a>
-      {/* <a href="https://instagram.com" target="_blank">
-        <BsInstagram />
-      </a> */}
+      <a href="https://instagram.com" target="_blank">
+        <BsInstagram className="header__socials-icon" />
+      </a>
     </div>
   );
 };
