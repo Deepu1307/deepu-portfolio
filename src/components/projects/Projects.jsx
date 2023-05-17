@@ -13,36 +13,36 @@ const data = [
     id: 1,
     image: IMG1,
     title: "Nexter (Real Estate)",
-    github: "",
-    demo: ""
+    github: "https://github.com/Deepu1307/Nexter-Project",
+    demo: "https://deepu1307.github.io/Nexter-Project/"
   },
   {
     id: 2,
     image: IMG2,
-    title: "Nexter (Tours & Travels)",
-    github: "",
-    demo: ""
+    title: "Natours (Tours & Travels)",
+    github: "https://deepu1307.github.io/Tour-and-travel-website/",
+    demo: "https://github.com/Deepu1307/Tour-and-travel-website"
   },
   {
     id: 3,
     image: IMG3,
     title: "Guess Number (Small Game)",
-    github: "",
-    demo: ""
+    github: "https://github.com/Deepu1307/Number-Guessing-Game",
+    demo: "https://deepu1307.github.io/Number-Guessing-Game/"
   },
   {
     id: 4,
     image: IMG4,
     title: "Food Delivery Website",
-    github: "",
-    demo: ""
+    github: "https://github.com/Deepu1307/omnifood",
+    demo: "https://deepu1307.github.io/omnifood/"
   },
   {
     id: 5,
     image: IMG5,
     title: "Booking.com (Clone)",
-    github: "",
-    demo: ""
+    github: "https://github.com/Deepu1307/Hotel-Booking-App",
+    demo: "https://github.com/Deepu1307/Hotel-Booking-App"
   },
   {
     id: 6,

@@ -26,6 +26,7 @@ const Footer = () => {
 
   <div className="footer__copyright">
       <small>&copy; Deepu Kumar. All rights reserved. </small>
+      {/* <u><a href="https://github.com/Deepu1307/deepu-portfolio">Source code of this website</a></u> */}
     </div>
   </footer>;
 };
