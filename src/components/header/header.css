@@ -74,11 +74,16 @@ header {
   font-size: 0.9rem;
 }
 
-/* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
-
-@media screen and (max-width: 1024px) {
+/* ++++++++++++ MEADIA QUERIES (BIG DEVICE) +++++++++++ */
+@media screen and (min-width: 1436px) {
   header {
-    height: 60vh;
+    height: 100vh;
+  }
+
+  .me {
+    margin-top: 7rem;
+    width: 22rem;
+    height: 26rem;
   }
 
   .margin_top {
@@ -86,9 +91,8 @@ header {
   }
 
   .header__socials-icon {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
- 
 }
 
 /* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
