@@ -94,6 +94,18 @@ padding: 50px 0px;
   font-weight: 400;
 }
 
+@media screen and (min-width: 1436px) {
+  .about__me {
+    width: 90%;
+  }
+
+  .about__me--style {
+    scale: 1.1;
+    height: 438px;
+    width: 455px;
+  }
+}
+
 
 /* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
 
