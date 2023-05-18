@@ -62,7 +62,7 @@ const Testimonial = () => {
               <div className="client__avatar">
                 <img src={test.avatar} alt={test.name} />
               </div>
-              <a className="client__name" href="https://www.linkedin.com/in/sudesh-kumar/" target="_blank">{test.name}</a>
+              <a className="client__name" href={test.link} target="_blank">{test.name}</a>
               <small style={{color: "#e6e6e6"}}>{test.review}</small>
             </SwiperSlide>
           )
