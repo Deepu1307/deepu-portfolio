@@ -1,8 +1,9 @@
 .container.contact__container {
-    width: 55%;
+    width: 60%;
     display: grid;
     grid-template-columns: 35% 58%;
-    gap: 20%;
+    /* gap: 20%; */
+    grid-column-gap: 80px;
 }
 
 .contact__options {
