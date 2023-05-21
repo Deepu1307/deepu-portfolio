@@ -66,6 +66,7 @@ header {
 
 .me_img {
   height: 300px;
+  transform: rotate(-5deg);
 }
 
 /* ++++++++++ SCROLL DOWN +++++++++++ */
@@ -85,13 +86,24 @@ header {
   }
 
   .me {
-    margin-top: 7rem;
-    width: 22rem;
-    height: 26rem;
+    margin-top: 6rem;
+    width: 25rem;
+    height: 27rem;
+  }
+
+  .me_img {
+    height: 450px;
+    transform: rotate(-5deg);
   }
 
   .margin_top {
-    margin: 10px 0;
+    margin: 25px 0;
+    font-size: 1.5rem;
+  }
+
+  .header_title {
+    font-size: 3rem;
+    font-weight: 600;
   }
 
   .header__socials-icon {

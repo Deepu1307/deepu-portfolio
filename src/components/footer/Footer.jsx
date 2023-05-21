@@ -4,7 +4,7 @@ import { BsLinkedin, BsGithub, BsFacebook, BsInstagram, BsStackOverflow, BsTwitt
 
 const Footer = () => {
   return <footer>
-    <a href="#" alt="footer__logo">Deepu.</a>
+    <a href="#" alt="logo name" className="footer_logo">Deepu.</a>
     <ul className="permalinks">
       <li><a href="#">Home</a></li>
       <li><a href="#about">About</a></li>

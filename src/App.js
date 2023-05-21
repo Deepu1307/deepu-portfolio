@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/header/Header.jsx";
 import Nav from "./components/nav/Nav.jsx";
 import About from "./components/about/About.jsx";
@@ -21,19 +21,26 @@ function App() {
     } else {
       setArrDirection(true)
     }
-    
-    if (arrDirection) {
-      window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    } else {
-      window.scrollTo(0, document.body.scrollHeight);
-    }
   }
+
+  useEffect(() => {
+    (function () {
+      if (arrDirection) {
+        console.log("deepu")
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      } else {
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    })()
+  }, [arrDirection]);
+
+  console.log("deepu arrDirection", arrDirection);
   
 
   return (
     <>
       <div onClick={directionHandler} className="goUp">
-      {arrDirection ? < TbArrowUp className="goUpIcon" /> : <TbArrowDown className="goUpIcon" />}
+      {arrDirection ? <TbArrowDown className="goUpIcon" /> : <TbArrowUp className="goUpIcon" />}
       </div>
 
       <Header />
