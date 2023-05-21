@@ -131,9 +131,14 @@ header {
   }
 
   .me {
-    margin-top: 9rem;
-    width: 25rem;
+    margin-top: 4rem;
+    width: 22rem;
     height: 34rem;
+  }
+
+  .me_img {
+    height: 360px;
+    transform: rotate(-5deg);
   }
 
   .header__socials,

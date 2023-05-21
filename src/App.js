@@ -42,7 +42,6 @@ function App() {
       <div onClick={directionHandler} className="goUp">
       {arrDirection ? <TbArrowDown className="goUpIcon" /> : <TbArrowUp className="goUpIcon" />}
       </div>
-
       <Header />
       <Nav />
       <About />
