@@ -134,10 +134,11 @@ header {
     margin-top: 4rem;
     width: 22rem;
     height: 34rem;
+    padding: 25px 7px 0px 12px;   
   }
 
   .me_img {
-    height: 360px;
+    height: 450px;  
     transform: rotate(-5deg);
   }
 
