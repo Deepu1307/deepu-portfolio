@@ -111,6 +111,13 @@ header {
   }
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1435px) {
+  .margin_top {
+    margin: 20px 0;
+    font-size: 1rem;
+  }
+}
+
 /* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
 
 @media screen and (max-width: 1024px) {
@@ -118,16 +125,25 @@ header {
     height: 100vh;
   }
 
-  /* .me {
-    width: 20rem;
-    height: 50rem;
-  } */
+  .margin_top {
+    margin: 14px 0;
+    font-size: 1rem;
+  }
+
+  .me {
+    margin-top: 5rem;
+  }
 }
 
 /* ++++++++++++ MEADIA QUERIES (SMALL DEVICE) +++++++++++ */
 @media screen and (max-width: 600px) {
   header {
     height: 100vh;
+  }
+
+  .margin_top {
+    margin: 12px 0;
+    font-size: 1rem;
   }
 
   .me {
