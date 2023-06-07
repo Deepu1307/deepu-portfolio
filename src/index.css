@@ -16,7 +16,7 @@
   --color-bg: #1f1f38;  
   --color-bg-variant: #3b3b90;
   --color-primary: #4db5ff;
-  --color-primary-secondary: #007cd5;
+  --color-primary-secondary: #0090f7;
   --color-primary-variant: rgba(77, 181, 255, 0.4);
   --color-white: #fff;
   --color-light: rgb(239, 231, 231);
@@ -116,7 +116,7 @@ a:hover {
 }
 
 .btn:hover {
-  background: var(--color-white);
+  background: var(--color-primary-secondary);
   color: var(--color-bg);
   border-color: transparent;
 }

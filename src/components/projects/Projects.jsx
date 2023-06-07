@@ -20,8 +20,9 @@ const data = [
     id: 2,
     image: IMG2,
     title: "Natours (Tours & Travels)",
-    github: "https://deepu1307.github.io/Tour-and-travel-website/",
-    demo: "https://github.com/Deepu1307/Tour-and-travel-website"
+    github: "https://github.com/Deepu1307/Tour-and-travel-website/",
+    demo: " https://deepu1307.github.io/Tour-and-travel-website/"
+   
   },
   {
     id: 3,

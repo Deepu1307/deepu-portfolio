@@ -1,6 +1,6 @@
 header {
   height: 100vh;
-  padding-top: 5rem;
+  padding-top: 4rem;
   overflow: hidden;
 }
 
@@ -114,7 +114,7 @@ header {
 /* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
 @media screen and (min-width: 1025px) and (max-width: 1435px) {
   .margin_top {
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 1rem;
   }
 }
@@ -127,12 +127,12 @@ header {
   }
 
   .margin_top {
-    margin: 14px 0;
+    margin: 10px 0;
     font-size: 1rem;
   }
 
   .me {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 }
 
