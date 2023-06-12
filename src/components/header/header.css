@@ -1,6 +1,6 @@
 header {
   height: 100vh;
-  padding-top: 5rem;
+  padding-top: 4rem;
   overflow: hidden;
 }
 
@@ -60,7 +60,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 3rem;
-  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  padding: 3rem 1.5rem 1.5rem 2.5rem;
   border-radius: 12rem 12rem 0 0;
 }
 
@@ -79,87 +79,144 @@ header {
   font-size: 0.9rem;
 }
 
-/* ++++++++++++ MEADIA QUERIES (BIG DEVICE) +++++++++++ */
-@media screen and (min-width: 1436px) {
+/* ++++++++++++ MEADIA QUERIES (SMALL DEVICE) +++++++++++ */
+@media screen and (max-width: 576px) {
   header {
-    height: 100vh;
+      height: 100vh;
+  }
+
+  .margin_top {
+      margin: 12px 0;
+      font-size: 1rem;
   }
 
   .me {
-    margin-top: 6rem;
-    width: 25rem;
-    height: 27rem;
+      margin-top: 4rem;
+      width: 22rem;
+      height: 34rem;
+      padding: 25px 7px 0px 22px;
   }
 
   .me_img {
-    height: 450px;
-    transform: rotate(-5deg);
+      height: 450px;
+      transform: rotate(-5deg);
   }
 
-  .margin_top {
-    margin: 25px 0;
-    font-size: 1.5rem;
-  }
-
-  .header_title {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-
-  .header__socials-icon {
-    font-size: 1.7rem;
+  .header__socials,
+  .scroll__down {
+      display: none;
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1435px) {
+@media (max-width: 576px) {
+  header {
+      height: 100vh;
+  }
+
   .margin_top {
-    margin: 20px 0;
-    font-size: 1rem;
+      margin: 12px 0;
+      font-size: 1rem;
+  }
+
+  .me {
+      margin-top: 4rem;
+      width: 22rem;
+      height: 34rem;
+      padding: 25px 7px 0px 22px;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+  header {
+      height: 100vh;
+  }
+
+  .margin_top {
+      margin: 12px 0;
+      font-size: 1rem;
+  }
+
+  .me {
+      margin-top: 4rem;
+      width: 22rem;
+      height: 34rem;
+      padding: 25px 7px 0px 22px;
   }
 }
 
 /* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   header {
-    height: 100vh;
+      height: 100vh;
   }
 
   .margin_top {
-    margin: 14px 0;
-    font-size: 1rem;
+      margin: 10px 0;
+      font-size: 1rem;
   }
 
   .me {
-    margin-top: 5rem;
+      margin-top: 4rem;
   }
 }
 
-/* ++++++++++++ MEADIA QUERIES (SMALL DEVICE) +++++++++++ */
-@media screen and (max-width: 600px) {
+/* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
   header {
-    height: 100vh;
+      height: 100vh;
   }
 
   .margin_top {
-    margin: 12px 0;
-    font-size: 1rem;
+      margin: 10px 0;
+      font-size: 1rem;
   }
 
   .me {
-    margin-top: 4rem;
-    width: 22rem;
-    height: 34rem;
-    padding: 25px 7px 0px 12px;   
+      margin-top: 4rem;
+  }
+}
+
+
+/* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
+@media screen and (min-width: 1200px) and (max-width: 1435px) {
+  .margin_top {
+      margin: 10px 0;
+      font-size: 1rem;
+  }
+}
+
+
+/* ++++++++++++ MEADIA QUERIES (BIG DEVICE) +++++++++++ */
+@media screen and (min-width: 1436px) {
+  header {
+      height: 100vh;
+  }
+
+  .me {
+      margin-top: 6rem;
+      width: 25rem;
+      height: 27rem;
   }
 
   .me_img {
-    height: 450px;  
-    transform: rotate(-5deg);
+      height: 450px;
+      transform: rotate(-5deg);
   }
 
-  .header__socials,
-  .scroll__down {
-    display: none;
+  .margin_top {
+      margin: 25px 0;
+      font-size: 1.5rem;
+  }
+
+  .header_title {
+      font-size: 3rem;
+      font-weight: 600;
+  }
+
+  .header__socials-icon {
+      font-size: 1.7rem;
   }
 }
