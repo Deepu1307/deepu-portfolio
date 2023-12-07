@@ -11,6 +11,7 @@ import Footer from "./components/footer/Footer.jsx";
 import { TbArrowUp } from "react-icons/tb";
 import { TbArrowDown } from "react-icons/tb";
 
+// Main component
 function App() {
 
   const [arrDirection, setArrDirection] = useState(true);
