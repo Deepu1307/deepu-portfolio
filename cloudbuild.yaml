@@ -1,0 +1,28 @@
+steps:
+  # 1. Build the Docker container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/deepu-portfolio:$COMMIT_SHA', '-t', 'gcr.io/$PROJECT_ID/deepu-portfolio:latest', '.']
+
+  # 2. Push image to Google Container Registry / Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/deepu-portfolio:latest']
+
+  # 3. Deploy to Google Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'deepu-portfolio'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/deepu-portfolio:latest'
+      - '--region'
+      - 'asia-south1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--port'
+      - '8080'
+
+images:
+  - 'gcr.io/$PROJECT_ID/deepu-portfolio:latest'
