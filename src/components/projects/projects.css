@@ -73,9 +73,10 @@
   font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   color: var(--color-text-muted);
-  white-space: nowrap;
+  text-align: center;
+  line-height: 1.4;
 }
 
 /* Grid */
@@ -426,4 +427,7 @@
   .project__item-image { height: 170px; }
   .modal__card { padding: 1.5rem; }
   .modal__metrics { grid-template-columns: 1fr; gap: 0.8rem; }
+  .projects__segment-label::before,
+  .projects__segment-label::after { display: none; }
+  .projects__segment-label { justify-content: center; text-align: center; }
 }
