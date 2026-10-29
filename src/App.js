@@ -2,53 +2,46 @@ import { useEffect, useState } from "react";
 import Header from "./components/header/Header.jsx";
 import Nav from "./components/nav/Nav.jsx";
 import About from "./components/about/About.jsx";
+import Timeline from "./components/timeline/Timeline.jsx";
 import Experience from "./components/experience/Experience.jsx";
 import Services from "./components/services/Services.jsx";
+import Packages from "./components/packages/Packages.jsx";
 import Projects from "./components/projects/Projects.jsx";
+import Articles from "./components/articles/Articles.jsx";
 import Testimonials from "./components/testimonials/Testimonial.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import Footer from "./components/footer/Footer.jsx";
-import { TbArrowUp } from "react-icons/tb";
-import { TbArrowDown } from "react-icons/tb";
+import { TbArrowUp, TbArrowDown } from "react-icons/tb";
 
-// Main component
 function App() {
-
   const [arrDirection, setArrDirection] = useState(true);
 
-  const directionHandler = () => {   
-    if (arrDirection) {
-      setArrDirection(false)
-    } else {
-      setArrDirection(true)
-    }
-  }
+  const directionHandler = () => {
+    setArrDirection(!arrDirection);
+  };
 
   useEffect(() => {
-    (function () {
-      if (arrDirection) {
-        console.log("deepu")
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-      } else {
-        window.scrollTo(0, document.body.scrollHeight);
-      }
-    })()
+    if (arrDirection) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
+    }
   }, [arrDirection]);
-
-  console.log("deepu arrDirection", arrDirection);
-  
 
   return (
     <>
-      <div onClick={directionHandler} className="goUp">
-      {arrDirection ? <TbArrowDown className="goUpIcon" /> : <TbArrowUp className="goUpIcon" />}
+      <div onClick={directionHandler} className="goUp" title={arrDirection ? "Scroll to Bottom" : "Scroll to Top"}>
+        {arrDirection ? <TbArrowDown className="goUpIcon" /> : <TbArrowUp className="goUpIcon" />}
       </div>
       <Header />
       <Nav />
       <About />
+      <Timeline />
       <Experience />
       <Services />
+      <Packages />
       <Projects />
+      <Articles />
       <Testimonials />
       <Contact />
       <Footer />

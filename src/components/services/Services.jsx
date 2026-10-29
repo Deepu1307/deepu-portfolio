@@ -1,88 +1,116 @@
 import React from "react";
 import "./services.css";
-import { BiCheck } from "react-icons/bi";
+import { BiCheck, BiRightArrowAlt } from "react-icons/bi";
+import { MdOutlineWeb, MdOutlinePhoneAndroid, MdOutlineCloud, MdOutlineSpeed } from "react-icons/md";
+import { SiGraphql, SiOpenai } from "react-icons/si";
+
+const services = [
+  {
+    icon: <MdOutlineWeb />,
+    title: "Web App Development",
+    tagline: "Full-stack web applications built to scale",
+    badge: "Most Popular",
+    items: [
+      "React.js & Next.js frontend development",
+      "Node.js / Express.js backend APIs",
+      "Database design (PostgreSQL, MongoDB)",
+      "Third-party API integrations",
+      "Performance optimization & SEO",
+      "Deployment & CI/CD setup",
+    ],
+  },
+  {
+    icon: <MdOutlinePhoneAndroid />,
+    title: "Mobile App Development",
+    tagline: "Cross-platform apps for iOS & Android",
+    items: [
+      "React Native app development",
+      "Expo-based rapid prototyping",
+      "Native device feature integrations",
+      "App Store & Play Store deployment",
+      "Offline-first & PWA experiences",
+    ],
+  },
+  {
+    icon: <MdOutlineCloud />,
+    title: "Backend & API Services",
+    tagline: "Scalable, secure, production-ready backends",
+    items: [
+      "RESTful & GraphQL API design",
+      "Microservices architecture",
+      "Azure Functions & AWS Lambda",
+      "Authentication & authorization (JWT, OAuth)",
+      "Database optimization & caching",
+    ],
+  },
+  {
+    icon: <MdOutlineSpeed />,
+    title: "Performance & Audit",
+    tagline: "Make your existing app blazing fast",
+    items: [
+      "Web performance audits (Lighthouse)",
+      "Core Web Vitals optimization",
+      "Code reviews & refactoring",
+      "Bundle size reduction",
+      "Caching strategies & CDN setup",
+    ],
+  },
+  {
+    icon: <SiGraphql />,
+    title: "Technical Consulting",
+    tagline: "Expert guidance for your tech decisions",
+    items: [
+      "Technology stack selection",
+      "Architecture design & review",
+      "Code quality & best practices",
+      "MVP planning & roadmap",
+      "Team mentoring & code reviews",
+    ],
+  },
+  {
+    icon: <SiOpenai />,
+    title: "AI Integration",
+    tagline: "Integrate AI/ML into your product",
+    items: [
+      "OpenAI / Gemini API integration",
+      "AI-powered chatbots & assistants",
+      "Smart content generation features",
+      "Recommendation engine setup",
+      "Automation & workflow AI",
+    ],
+    badge: "New",
+  },
+];
 
 const Services = () => {
   return (
     <section id="services">
-      <h5>What I Offer</h5>
-      <h2>Services</h2>
+      <p className="section__label">What I Offer</p>
+      <h2 className="section__title">Services</h2>
+      <div className="section__divider"><span></span></div>
+
       <div className="container service__container">
-        <article className="service">
-          <div className="service__head">
-            <h3>Web Development</h3>
-          </div>
-          <ul className="service__list">
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Front-end development (HTML, CSS, JavaScript & React.js).</p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Back-end development (using frameworks like Node.js etc.)</p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Web testing and quality assurance & deployment and maintenance.</p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Integrations with third-party APIs and services.</p>
-            </li>
-          </ul>
-        </article>
-        {/* End Of Web Development*/}
-        <article className="service">
-          <div className="service__head">
-            <h3>App Development</h3>
-          </div>
-          <ul className="service__list">
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Native app development (iOS and Android).</p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Hybrid app development (using React Native).</p>
-            </li>          
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Integrations with third-party APIs and services.</p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>App testing and quality assurance so that it works.</p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>App deployment and maintenance to run smoothly.</p>
-            </li>
-          </ul>
-        </article>
-        {/* End Of App Developement*/}
-        <article className="service">
-          <div className="service__head">
-            <h3>DevOps</h3>
-          </div>
-          <ul className="service__list">          
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Continuous integration and continuous delivery (CI/CD).</p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Cloud computing (using services like AWS, Azure, Google Cloud).</p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Security and compliance, Automation and orchestration.</p>
-            </li>
-            <li>
-              <BiCheck className="service__list-icon" />
-              <p>Disaster recovery and business continuity planning.</p>
-            </li>
-          </ul>
-        </article>
+        {services.map((svc, i) => (
+          <article key={i} className="service">
+            {svc.badge && <span className="service__badge">{svc.badge}</span>}
+            <div className="service__icon-wrap">{svc.icon}</div>
+            <div className="service__head">
+              <h3>{svc.title}</h3>
+            </div>
+            <p className="service__tagline">{svc.tagline}</p>
+            <ul className="service__list">
+              {svc.items.map((item, j) => (
+                <li key={j}>
+                  <BiCheck className="service__list-icon" />
+                  <p>{item}</p>
+                </li>
+              ))}
+            </ul>
+            <a href="#contact" className="service__cta">
+              Get Started <BiRightArrowAlt />
+            </a>
+          </article>
+        ))}
       </div>
     </section>
   );

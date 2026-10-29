@@ -1,0 +1,105 @@
+/* ============ ARTICLES / INSIGHTS ============ */
+#articles {
+  padding: 6rem 0;
+  background: var(--color-bg-2);
+}
+
+.articles__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.article__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+}
+
+.article__card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-6px);
+}
+
+.article__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.article__tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article__read-time {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.article__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.article__card:hover .article__title {
+  color: var(--color-primary-light);
+}
+
+.article__summary {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.article__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.article__pill {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  background: var(--color-bg-variant);
+  color: var(--color-text-muted);
+}
+
+.article__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: auto;
+  transition: var(--transition);
+}
+
+.article__link:hover {
+  gap: 0.7rem;
+  color: var(--color-secondary);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 1024px) {
+  .articles__container { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; gap: 1.5rem; }
+}

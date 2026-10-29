@@ -1,75 +1,93 @@
 import React from "react";
 import "./testimonial.css";
-import AVTR1 from "../../assets/sudesh.jpeg"
-import AVTR2 from "../../assets/amar.jpeg"
-import AVTR3 from "../../assets/sonu.jpeg"
-// import AVTR4 from "../../assets/avatar4.jpg"
-
-
-// import Swiper core and required modules
-import { Pagination } from 'swiper';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
+import AVTR1 from "../../assets/sudesh.jpeg";
+import AVTR2 from "../../assets/amar.jpeg";
+import AVTR3 from "../../assets/sonu.jpeg";
+import { Pagination, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { BsStarFill, BsLinkedin } from "react-icons/bs";
 
 const data = [
   {
     avatar: AVTR1,
     name: "Sudesh Saksham",
-    review: "Congratulations on teaching yourself programming! That's an impressive feat and shows that you have a lot of dedication and determination.Remember, being a self-taught programmer means that you have the potential to be a great programmer. Keep learning, building, collaborating, and practicing good coding practices, and you'll be well on your way to a successful career in programming.",
-    link: "https://www.linkedin.com/in/sudesh-kumar/"
+    role: "Software Engineer",
+    review:
+      "Congratulations on teaching yourself programming! That's an impressive feat showing dedication and determination. Deepu has the potential to be a great programmer — keep learning, building, collaborating, and practicing good coding practices. You'll have a successful career in programming.",
+    link: "https://www.linkedin.com/in/sudesh-kumar/",
+    stars: 5,
   },
   {
     avatar: AVTR2,
     name: "Amar Kumar Singh",
-    review: "I highly recommend Deepu as a self-taught programmer. They have shown a tremendous dedication to learning and have a strong work ethic. Despite not having a formal education in programming, Deepu has proven to be a quick learner and has been able to take on challenging projects with ease. Their passion for coding is evident in their work and their ability to solve complex problems is impressive.",
-    link: "https://www.linkedin.com/in/developeramarkumar/"
+    role: "Senior Developer",
+    review:
+      "I highly recommend Deepu as a developer. They have shown tremendous dedication to learning with a strong work ethic. Despite being self-taught, Deepu is a quick learner who takes on challenging projects with ease. Their passion for coding is evident, and their ability to solve complex problems is impressive.",
+    link: "https://www.linkedin.com/in/developeramarkumar/",
+    stars: 5,
   },
   {
     avatar: AVTR3,
     name: "Sonu Kumar",
-    review: "It is my pleasure to recommend Deepu as a self-taught programmer. Their self-motivation, determination, and eagerness to learn have been invaluable to our team. [Name] is not afraid to ask questions and seek feedback to improve their skills, and has become a valuable asset to our company. Their ability to work independently and take on new challenges is a testament to their dedication and drive to succeed.",
-    link: "https://www.linkedin.com/in/collsonu/"
+    role: "Team Lead",
+    review:
+      "It is my pleasure to recommend Deepu. Their self-motivation, determination, and eagerness to learn have been invaluable to our team. Deepu is not afraid to ask questions and seek feedback to improve their skills. Their ability to work independently and take on new challenges is a testament to their dedication.",
+    link: "https://www.linkedin.com/in/collsonu/",
+    stars: 5,
   },
-  // {
-  //   avatar: AVTR4,
-  //   name: "Sayak Brahmachari",
-  //   review: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora natus perferendis sed nam reiciendis nulla, ipsam dolorum a beatae non, quidem totam adipisci illo ullam expedita eveniet repellendus optio ipsa.",
-  //   link: ""
-  // }
-]
+];
 
 const Testimonial = () => {
-  return <section id="testimonials">
-    <h5>Recommendations recieved</h5>
-    <h2>Recommendations</h2>
-    <Swiper className="container testimonilas__container mySwiper"    
-      modules={[Pagination]}
-      spaceBetween={40}
-      slidesPerView={1}
-      pagination={{ dynamicBullets: true, clickable: true }}      
-    >
-      {
-        data.map((test, index) => {
-          return (
-            <SwiperSlide className="testimonials" key={index}>
+  return (
+    <section id="testimonials">
+      <p className="section__label">What People Say</p>
+      <h2 className="section__title">Recommendations</h2>
+      <div className="section__divider"><span></span></div>
+
+      <Swiper
+        className="container testimonilas__container mySwiper"
+        modules={[Pagination, Autoplay]}
+        spaceBetween={30}
+        slidesPerView={1}
+        pagination={{ dynamicBullets: true, clickable: true }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        breakpoints={{
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 2 },
+        }}
+      >
+        {data.map((test, index) => (
+          <SwiperSlide className="testimonials" key={index}>
+            <div className="client__stars">
+              {Array(test.stars).fill(0).map((_, i) => (
+                <BsStarFill key={i} />
+              ))}
+            </div>
+            <p className="testimonial__text">{test.review}</p>
+            <div className="testimonial__author">
               <div className="client__avatar">
                 <img src={test.avatar} alt={test.name} />
               </div>
-              <a className="client__name" href={test.link} target="_blank">{test.name}</a>
-              <small style={{color: "#e6e6e6"}}>{test.review}</small>
-            </SwiperSlide>
-          )
-        })
-      }
-    </Swiper>
-  </section>;
+              <div className="client__info">
+                <a
+                  className="client__name"
+                  href={test.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {test.name} <BsLinkedin style={{ fontSize: "0.8rem", color: "#0A66C2" }} />
+                </a>
+                <span className="client__role">{test.role}</span>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
 };
 
 export default Testimonial;

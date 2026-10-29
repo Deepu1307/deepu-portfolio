@@ -1,77 +1,158 @@
+/* ============ SERVICES ============ */
 #services {
-  background: #e1eff2;
-  padding: 50px 0px;
-  }
-  
+  background: var(--color-bg-2);
+  padding: 6rem 0;
+}
+
 .service__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  place-items:  center;
+  gap: 1.5rem;
 }
 
 .service {
-  background: var(--color-bg-variant);
-  border-radius: 0 0 2rem 2rem;
-  border: 1px solid var(--color-primary);
-  height: fit-content;
-  transform: var(--transition);
-  height: 500px;
-}
-
-.service:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
   cursor: default;
 }
 
-.service__head {
-  background: var(--color-primary);
-  padding: 2rem;
-  border-radius: 0 0 2rem 2rem;
-  box-shadow: 0 2rem 1rem rga(0, 0, 0, 0.1);
+.service::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
+}
+
+.service:hover::before { transform: scaleX(1); }
+
+.service:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-6px);
+}
+
+/* Glow blob on hover */
+.service::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-primary-glow), transparent 70%);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.service:hover::after { opacity: 1; }
+
+.service__icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(108,99,255,0.05));
+  border: 1px solid rgba(108,99,255,0.2);
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.service:hover .service__icon-wrap {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 20px var(--color-primary-glow);
 }
 
 .service__head h3 {
-  color: var(--color-bg);
-  font-size: 1rem;
-  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.service__tagline {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 .service__list {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .service__list li {
   display: flex;
-  gap: 1rem;
-  margin-top: 0.8rem;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
 }
 
 .service__list-icon {
   color: var(--color-primary);
+  font-size: 1rem;
+  flex-shrink: 0;
   margin-top: 2px;
-  font-size: 2.2rem;
 }
 
-.service__list p {
-  font-size: 0.9rem;
-  display: inline-block;
+.service__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: var(--transition);
 }
 
-/* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
+.service__cta:hover {
+  gap: 0.7rem;
+  color: var(--color-secondary);
+}
+
+/* Featured badge */
+.service__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== MEDIA QUERIES ===== */
 @media screen and (max-width: 1024px) {
-  .service__container {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    /* padding: 0 2rem; */
-  }
+  .service__container { grid-template-columns: 1fr 1fr; }
 }
 
-/* ++++++++++++ MEADIA QUERIES (SMALL DEVICE) +++++++++++ */
 @media screen and (max-width: 600px) {
-  .service__container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+  .service__container { grid-template-columns: 1fr; }
+  .service { padding: 2rem 1.5rem; }
 }

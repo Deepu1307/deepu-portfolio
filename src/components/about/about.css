@@ -1,210 +1,177 @@
+/* ============ ABOUT ============ */
 #about {
-background: #e1eff2;
-padding: 50px 0px;
+  background: var(--color-bg-2);
+  padding: 6rem 0;
 }
 
 .about__container {
   display: grid;
-  grid-template-columns: 35% 50%;
-  gap: 15%;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 6rem;
+  align-items: center;
 }
 
+/* Left: Image */
 .about__me {
+  position: relative;
+}
+
+.about__img-wrap {
   width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 2rem;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    var(--color-primary),
-    transparent
-  );
-  display: grid;
-  place-items: center;
+  max-width: 360px;
+  margin: 0 auto;
+  position: relative;
 }
 
-.about__me--img {
-  border-radius: 2rem;
-  overflow: hidden;
-  transform: rotate(10deg);
-  transition: var(--transition);
+.about__img-wrap img {
+  border-radius: var(--radius-lg);
+  filter: brightness(0.9) contrast(1.05);
 }
 
-.about__me--style {
-  scale: 1.27;
-  height: 345px;
-  width: 345px
-} 
-
-.about__me--img:hover {
-  transform: rotate(0);
+.about__img-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+  z-index: -1;
+  opacity: 0.5;
 }
+
+.about__exp-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.about__exp-badge .exp-years {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.about__exp-badge .exp-label {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Right: Content */
+.about__content {}
 
 .about__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 2rem;
 }
 
 .about__card {
-  background: var(--color-bg-variant);
-  border: 1px solid transparent;
-  padding: 2rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
   text-align: center;
   transition: var(--transition);
-  border-radius: 1rem;
+  cursor: default;
 }
 
 .about__card:hover {
-  background-color: transparent;
-  border-color: var(--color-primary-variant);
-  cursor: default;  
-}
-
-.about__card:hover > small {
-  color: var(--color-primary) !important; 
-  font-weight: 600;
+  border-color: var(--color-border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
 }
 
 .about__icon {
   color: var(--color-primary);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .about__card h5 {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.2rem;
 }
+
 .about__card small {
-  font-size: 0.7rem;
-  color: var(--color-light);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
 }
 
-.about__content p {
-  margin-bottom: 1rem;
-  color: var(--color-black);
+.about__bio {
+  margin-bottom: 1.5rem;
 }
 
-.about_link:hover {
-  color: var(--color-primary-secondary);
+.about__bio p {
+  color: var(--color-text-secondary);
+  line-height: 1.9;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
 }
 
-.text-light-small {
-  color: var(--color-light) !important; 
-  font-weight: 400;
+.about__bio a {
+  color: var(--color-primary);
+  font-weight: 500;
 }
 
-@media screen and (min-width: 1436px) {
-  .about__me {
-    width: 90%;
-  }
-
-  .about__me--style {
-    scale: 1.1;
-    height: 438px;
-    width: 455px;
-  }
+.about__bio a:hover {
+  color: var(--color-secondary);
 }
 
+/* Tech stack pills */
+.about__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
 
-/* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
+.stack-pill {
+  background: rgba(108, 99, 255, 0.1);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 50px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.78rem;
+  color: var(--color-primary-light);
+  font-weight: 500;
+  transition: var(--transition);
+}
 
+.stack-pill:hover {
+  background: rgba(108, 99, 255, 0.2);
+  color: white;
+}
+
+.about__cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===== MEDIA QUERIES ===== */
 @media screen and (max-width: 1024px) {
-  #about h2 {
-    margin-bottom: 0px;
-  }
-
   .about__container {
-    padding: 0;
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 3rem;
   }
-
-  .about__me {
-    width: 50%;
-    background: none;
-    margin: 2rem auto 4rem;
-  }
-
-
-  .about__me--style {
-    scale: 1;
-    height: 300px;
-    width: 380px
-  } 
-
-  .about__me--img {   
-    transform: rotate(0deg);
-  }
-
-
-
-
-  .about__content p {
-    margin: 1rem 0 1.5rem;
-  }
+  .about__img-wrap { max-width: 300px; }
+  .about__cards { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
 }
 
-
-
-/* ++++++++++++ MEADIA QUERIES (MEDIUM DEVICE) +++++++++++ */
 @media screen and (max-width: 600px) {
-  .about__me {
-    /* width: 65%; */
-    margin: 0 auto 3rem;
-    width: 100%;
-    background: none;
-    aspect-ratio: 1/1;
-    border-radius: 2rem;  
-    display: grid;
-    place-items: center;
-  }
-
-  .about__me--style {
-    scale: 1;
-     height: 300px;
-    width: 380px
-  } 
-
-  .about__me--img {   
-    transform: rotate(0deg);
-  }
-
-  .about__cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .about__content {
-    text-align: center;
-  }
-
-  .about__content p {
-    margin: 1.2rem 0;
-    text-align: justify;
-  }  
+  .about__cards { grid-template-columns: repeat(2, 1fr); }
+  .about__card { padding: 1rem 0.7rem; }
+  .about__exp-badge { right: 0; bottom: -15px; }
 }
-
-
-
-/* ++++++++++++ MEADIA QUERIES (SMALL DEVICE) +++++++++++ */
-@media screen and (max-width: 480px) {
-  .about__me--img {   
-    transform: rotate(0deg);
-  }
-
-  .about__me--style {
-    scale: 1;
-    height: 230px;
-    width: 280px
-  } 
-}
-
-
-
-
-
-
-
-
