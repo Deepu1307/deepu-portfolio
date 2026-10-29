@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import PIC from "../../assets/pic.jpeg";
+import PIC from "../../assets/me2.jpg";
 import { FaAward, FaGraduationCap } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";

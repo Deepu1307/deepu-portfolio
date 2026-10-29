@@ -1,7 +1,7 @@
 import React from 'react';
 import CTA from "./CTA.jsx";
 import HeaderSocials from "./HeaderSocial.jsx";
-import ME from "../../assets/me1.png";
+import ME from "../../assets/pic.jpeg";
 import "./header.css";
 import Typewriter from 'typewriter-effect';
 import { SiReact, SiFlutter, SiGooglecloud } from "react-icons/si";
